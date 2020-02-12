@@ -41,6 +41,13 @@ Thoughts:
   
   
 ## Face Detectin Using Improved Faster RCNN
+The paper presented a light-head RCNN. Attached a deformable layer after backbone(Resnet) to exploit image context and be robust to variations. The authors carefully designed anchors' size and a voted-based NMS straegy. They also used multi-scale training and testing.
+
+Thoughts:
+  1. it is worthy adding deformable layer to backbone. But where and how many layers?
+  2. When dealing with small objects. not only anchors, but also IoU are required to be designed carefully. Because usually,    objects do not take up all space in a RoI or in a box. If thinking in this way, then normal IoU is not good for small        objects.
+  3. 
+
 
 
   
