@@ -58,6 +58,8 @@ Thoughts:
 
 ## A High-Efficiency Fully Convolutional Networks for Pixel-Wise Surface Defect Detection
 
+## Autonomous Structural Visual Inspection Using Region-Based Deep Learning for Detecting Multiple Damage Types
 
+## Segmentation-Based Deep-Learning Approach for Surface-Defect Detection
 
   
