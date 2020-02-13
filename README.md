@@ -52,7 +52,24 @@ Thoughts:
   1. For some small objects, or some objects that only account for ~50% of its Bbox with different shapes, traditional IoU is really bad. Even if IoU is greater than some threshold, it is hard to say that really defect being included in that overlap areas. So this can be improved.
   2. One reason that makes 1 is that usually we are using normal boxes, that is, no matter how your object is being rotated, its ground truth box is still regular rectangle. If gt boxes can be also rotated, then this will improve accuracy.
 
+
 ## Autonomous Structural Visual Inspection Using Region-Based Deep Learning for Detecting Multiple Damage Types
+
+This paper explores how to implement Faster RCNN on videos for defect detection.
+The paper was published in 2017 as same as Faster RCNN was introduced, so there is no improvement.
+
+Thoughts:
+  1. Could be helpful when dealing with videos.
+
+
+## Surface Defects Recognition of Wheel Hub Based on Improved Faster R-CNN
+The paper deployed faster RCNN for wheel hub defect detection. Its backbone is ZF-net. Then, the paper added drop-out layers between FC layers in RoI-Heads.
+
+Thoughts:
+  1. The paper gives me a term: RoB(region of background), this is a term that needs to think about. 
+  2. Is loss function for RPN is the best? How to understand the loss and how to improve it.
+  3. Again, anchor's size need to be set carefully.
+
 
 ## Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
 
@@ -61,5 +78,6 @@ Thoughts:
 ## A High-Efficiency Fully Convolutional Networks for Pixel-Wise Surface Defect Detection
 
 ## Segmentation-Based Deep-Learning Approach for Surface-Defect Detection
+
 
   
