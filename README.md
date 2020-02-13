@@ -52,13 +52,13 @@ Thoughts:
   1. For some small objects, or some objects that only account for ~50% of its Bbox with different shapes, traditional IoU is really bad. Even if IoU is greater than some threshold, it is hard to say that really defect being included in that overlap areas. So this can be improved.
   2. One reason that makes 1 is that usually we are using normal boxes, that is, no matter how your object is being rotated, its ground truth box is still regular rectangle. If gt boxes can be also rotated, then this will improve accuracy.
 
+## Autonomous Structural Visual Inspection Using Region-Based Deep Learning for Detecting Multiple Damage Types
+
 ## Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
 
 ## A semi-supervised convolutional neural network-based method for steel surface defect recognition
 
 ## A High-Efficiency Fully Convolutional Networks for Pixel-Wise Surface Defect Detection
-
-## Autonomous Structural Visual Inspection Using Region-Based Deep Learning for Detecting Multiple Damage Types
 
 ## Segmentation-Based Deep-Learning Approach for Surface-Defect Detection
 
