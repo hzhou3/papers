@@ -9,6 +9,7 @@ Main idea: reconstruct image patches and get residual maps.
 Pros:
   1. using autoencoders to detect which is good for the situation where there are not much defective images.
   2. ignoring background because of original image patches and reconstructed image patches leads to good accuracy.
+
 Cons: 
   1. Using Gaussian Pyramid will trible the training time.
   2. Not good in real time production since it needs three models.
