@@ -1,4 +1,4 @@
-# Papers' Summary
+# Paper Summary
 
 ## Automatic Fabric Defect Detection with a Multi-Scale Convolutional Denoising Autoencoder Network Model
 
