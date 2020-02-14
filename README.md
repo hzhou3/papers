@@ -1,22 +1,5 @@
 # Paper Summary
 ## Spring 2020
-### Automatic Fabric Defect Detection with a Multi-Scale Convolutional Denoising Autoencoder Network Model
-
-The paper presented an approach: This approach is used to reconstruct image patches with a convolutional denoising autoencoder network at multiple Gaussian pyramid levels.
-
-Main idea: reconstruct image patches and get residual maps.
-
-Pros:
-  1. using autoencoders to detect which is good for the situation where there are not much defective images.
-  2. ignoring background because of original image patches and reconstructed image patches leads to good accuracy.
-
-Cons: 
-  1. Using Gaussian Pyramid will trible the training time.
-  2. Not good in real time production since it needs three models.
-  
-Thoughts:
-  1. This is good if there are less defective images.
-  2. The idea behind it is simple. Traditional methods will somehow affect by background and this method can ignore bg and from that, residual maps can be obtained easily.
 
 ### Augmentation for small object detection
 
@@ -73,7 +56,26 @@ Thoughts:
   4. IoU seems like a problem for abnormal objects.
 
 ## Fall 2019
-Uploading...
+
+### Automatic Fabric Defect Detection with a Multi-Scale Convolutional Denoising Autoencoder Network Model
+
+The paper presented an approach: This approach is used to reconstruct image patches with a convolutional denoising autoencoder network at multiple Gaussian pyramid levels.
+
+Main idea: reconstruct image patches and get residual maps.
+
+Pros:
+  1. using autoencoders to detect which is good for the situation where there are not much defective images.
+  2. ignoring background because of original image patches and reconstructed image patches leads to good accuracy.
+
+Cons: 
+  1. Using Gaussian Pyramid will trible the training time.
+  2. Not good in real time production since it needs three models.
+  
+Thoughts:
+  1. This is good if there are less defective images.
+  2. The idea behind it is simple. Traditional methods will somehow affect by background and this method can ignore bg and from that, residual maps can be obtained easily.
+
+### Uploading others
 
 ## About to read
 
