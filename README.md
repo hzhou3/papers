@@ -61,7 +61,7 @@ Thoughts:
 
 The paper presented an approach: This approach is used to reconstruct image patches with a convolutional denoising autoencoder network at multiple Gaussian pyramid levels.
 
-Main idea: reconstruct image patches and get residual maps.
+Main idea: reconstruct image patches (with noise) and get residual maps.
 
 Pros:
   1. using autoencoders to detect which is good for the situation where there are not much defective images.
@@ -75,7 +75,66 @@ Thoughts:
   1. This is good if there are less defective images.
   2. The idea behind it is simple. Traditional methods will somehow affect by background and this method can ignore bg and from that, residual maps can be obtained easily.
 
-### Uploading others
+### Fabric Defect Detection Using Activation Layer Embedded Convolutional Neural Network
+Main idea: get a motif by autocorrelation, substract it from image by sliding window, and then take the "node map(probablity map)" as an activaion layer for CNN to enhance defects.
+
+Pros:
+  1. A hybrid method which combines correlation with CNN.
+  2. bg will have less effect.
+
+Cons:
+  1. the first step is critical since the later activation layer is used. But the correlation is bad for 	getting a good motif.
+  2. for each image, correlation is needed so that it becomes slow for sure.
+  3. edge is somehow being ignored by correlation.
+  4. Some small defects are omitted.
+
+### A fast and robust convolutional neural network-based defect detection model in product quality control
+Purely CNNs. First to classify based on different motifs (6 motifs in their dataset), then detect if defective or not.
+
+Thoughts:
+  1. For given dataset, this is a good way to detect.
+  2. Not good for reality.
+
+### A compact convolutional neural network for textured surface anomaly detection
+Same as above, the model performs well on given dataset.
+
+### Autoencoder-Based Fabric Defect Detection with Cross-Patch Similarity
+The paper presented an unsupervised way for fabric detection. For training process, AEs is to learn how to reconstruct image patches. For inference, the model will select high-loss image patches from AEs, then calculate resdual patch. 
+
+Thoughts:
+  1. AE to reconstruct image patches.
+  2. Calculate resdual image patches.
+  3. No need to much images to train.
+
+### Deformable Patterned Fabric Defect Detection With Fisher Criterion-Based Deep Learning
+The paper is similar to above, to get resdual patches.
+The paper has two models, one is for classify patches into 2 classes(d or non-d), another one is to reconstruct patches. 
+
+
+## Review
+
+### Automated fabric defect detection—A review
+A review for fabric defect detection.
+
+1. 17 groups of wall paper
+2. 70 kinds of defects.
+3. non-motif vs. motif(more than 1 motif)
+
+methods:
+  1. statistical methods + NNs
+	correlation + CNN
+	Morphology
+  2. Spectral + NN
+	Fourier transform
+	Wavelet transform
+  3. ...
+
+Issues:
+  1. imbalanced dataset (more non-defective, less defective)
+  2. defects are small w.r.t the whole image ( 1% - 10 %) depending on datasets.
+  3. size varies. (pixels)
+  3. more than 1 motifs.
+  
 
 ## About to read
 
