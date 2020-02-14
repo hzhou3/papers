@@ -70,6 +70,7 @@ Thoughts:
   1. The paper gives me a term: RoB(region of background), this is a term that needs to think about. 
   2. Is loss function for RPN is the best? How to understand the loss and how to improve it.
   3. Again, anchor's size need to be set carefully.
+  4. IoU seems like a problem for abnormal objects.
 
 
 ## Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
