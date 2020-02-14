@@ -1,6 +1,6 @@
 # Paper Summary
-
-## Automatic Fabric Defect Detection with a Multi-Scale Convolutional Denoising Autoencoder Network Model
+## Spring 2020
+### Automatic Fabric Defect Detection with a Multi-Scale Convolutional Denoising Autoencoder Network Model
 
 The paper presented an approach: This approach is used to reconstruct image patches with a convolutional denoising autoencoder network at multiple Gaussian pyramid levels.
 
@@ -18,7 +18,7 @@ Thoughts:
   1. This is good if there are less defective images.
   2. The idea behind it is simple. Traditional methods will somehow affect by background and this method can ignore bg and from that, residual maps can be obtained easily.
 
-## Augmentation for small object detection
+### Augmentation for small object detection
 
 This paper presented current issues for Mask RCNN to detect small objects.
   1. A few images contain small objects.
@@ -36,7 +36,7 @@ Thoughts:
       FPN is a good way.
       But for a typical combination of ResNet + FPN, we need to think about which feature maps we really need for small objects.
 
-## Face Detectin Using Improved Faster RCNN
+### Face Detectin Using Improved Faster RCNN
 The paper presented a light-head RCNN. Attached a deformable layer after backbone(Resnet) to exploit image context and be robust to variations. The authors carefully designed anchors' size and a voted-based NMS straegy. They also used multi-scale training and testing.
 
 Thoughts:
@@ -46,7 +46,7 @@ Thoughts:
   4. Hard example mining could improve accuracy.
 
 
-## An Improved Faster RCNN for Small Object Detection
+### An Improved Faster RCNN for Small Object Detection
 This paper proposed a new way to calculate IoU so that not only intersaction areas being considered, but also non-overlap areas. In this way, faster RCNN could detect small objects ((0, 32] pixels) better. The authors also utilized many other technologies like Soft-NMS, RoI Align and FPN...
 
 Thoughts:
@@ -54,7 +54,7 @@ Thoughts:
   2. One reason that makes 1 is that usually we are using normal boxes, that is, no matter how your object is being rotated, its ground truth box is still regular rectangle. If gt boxes can be also rotated, then this will improve accuracy.
 
 
-## Autonomous Structural Visual Inspection Using Region-Based Deep Learning for Detecting Multiple Damage Types
+### Autonomous Structural Visual Inspection Using Region-Based Deep Learning for Detecting Multiple Damage Types
 
 This paper explores how to implement Faster RCNN on videos for defect detection.
 The paper was published in 2017 as same as Faster RCNN was introduced, so there is no improvement.
@@ -63,7 +63,7 @@ Thoughts:
   1. Could be helpful when dealing with videos.
 
 
-## Surface Defects Recognition of Wheel Hub Based on Improved Faster R-CNN
+### Surface Defects Recognition of Wheel Hub Based on Improved Faster R-CNN
 The paper deployed faster RCNN for wheel hub defect detection. Its backbone is ZF-net. Then, the paper added drop-out layers between FC layers in RoI-Heads.
 
 Thoughts:
@@ -72,14 +72,18 @@ Thoughts:
   3. Again, anchor's size need to be set carefully.
   4. IoU seems like a problem for abnormal objects.
 
+## Fall 2019
+Uploading...
 
-## Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
+## About to read
 
-## A semi-supervised convolutional neural network-based method for steel surface defect recognition
+### Real-time Detection of Steel Strip Surface Defects Based on Improved YOLO Detection Network
 
-## A High-Efficiency Fully Convolutional Networks for Pixel-Wise Surface Defect Detection
+### A semi-supervised convolutional neural network-based method for steel surface defect recognition
 
-## Segmentation-Based Deep-Learning Approach for Surface-Defect Detection
+### A High-Efficiency Fully Convolutional Networks for Pixel-Wise Surface Defect Detection
+
+### Segmentation-Based Deep-Learning Approach for Surface-Defect Detection
 
 
   
