@@ -110,6 +110,24 @@ Thoughts:
 The paper is similar to above, to get resdual patches.
 The paper has two models, one is for classify patches into 2 classes(d or non-d), another one is to reconstruct patches. 
 
+### Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression
+Idea:
+  1. find problems in GIOU loss and improve it.
+
+Problem in GIOU:
+  1. Compared with IOU loss, GIOU loss takes the area C that enclose GT and P boxes into account. This will make the NN learn that it should improve IOU, which means in the later evaluation(this depends on IoU very much), there will be improvements.
+  2. GIOU is more useful when GT and P are far away from each other. This will give the NN a direction that where it should go to improve IOU.
+  3. GIOU does not help much when P and GT have overlapes.
+  4. GIOU becomes IOU when GT and P far away.
+
+Distance-IOU:
+  1. This IOU takes P center and C centers into account. Add a penalty term based on these Pcenter/Ccenter.
+  2. Compared with GIOU, this still work when GT and P far away. So in non-overlap cases, this GIOU los will help a lot
+  3. In the paper, SSD and YOLO v3 have a bigger accuracy improvement than Faster RCNN, this is because in faster rcnn, there are not too much cases where GT and P are not overlopped each other so that the improvement is about 2%(8-9% in one stage detector).
+
+Thoughts:
+  1. GIOU will help NN do a better job on evaluation. Originally, Smooth L1 loss is used in box regression, but IoU is used for accuracy evaluation. Smooth L1 is based on 4 coners instead of their IOUs.
+  2. If use GIOU loss for box regression, this improves accuracy metrics (APs).
 
 ## Review
 
@@ -136,24 +154,7 @@ Issues:
   3. more than 1 motifs.
  
 
-### Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression
-Idea:
-  1. find problems in GIOU loss and improve it.
 
-Problem in GIOU:
-  1. Compared with IOU loss, GIOU loss takes the area C that enclose GT and P boxes into account. This will make the NN learn that it should improve IOU, which means in the later evaluation(this depends on IoU very much), there will be improvements.
-  2. GIOU is more useful when GT and P are far away from each other. This will give the NN a direction that where it should go to improve IOU.
-  3. GIOU does not help much when P and GT have overlapes.
-  4. GIOU becomes IOU when GT and P far away.
-
-Distance-IOU:
-  1. This IOU takes P center and C centers into account. Add a penalty term based on these Pcenter/Ccenter.
-  2. Compared with GIOU, this still work when GT and P far away. So in non-overlap cases, this GIOU los will help a lot
-  3. In the paper, SSD and YOLO v3 have a bigger accuracy improvement than Faster RCNN, this is because in faster rcnn, there are not too much cases where GT and P are not overlopped each other so that the improvement is about 2%(8-9% in one stage detector).
-
-Thoughts:
-  1. GIOU will help NN do a better job on evaluation. Originally, Smooth L1 loss is used in box regression, but IoU is used for accuracy evaluation. Smooth L1 is based on 4 coners instead of their IOUs.
-  2. If use GIOU loss for box regression, this improves accuracy metrics (APs).
 
 ## About to read
 
